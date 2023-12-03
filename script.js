@@ -1,7 +1,7 @@
 
 
 function download() {
-    const apiUrl = 'https://abobus-snowy.vercel.app/api/download';
+    const apiUrl = 'AIzaSyBQ5XNW5tzUbFiqSX2Ldrbe-O4GeIt9Z_c';
     const videoUrl = document.getElementById('videoUrl').value;
 
     if (!videoUrl) {
