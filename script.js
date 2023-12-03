@@ -9,7 +9,7 @@ function download() {
         return;
     }
 
-    fetch("https://abobus-snowy.vercel.app/", {
+    fetch("https://abobus-snowy.vercel.app", {
         method: 'POST',
         mode: 'cors',
         credentials: 'include',
