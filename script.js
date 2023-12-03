@@ -12,7 +12,7 @@ function download() {
     fetch("https://abobus-snowy.vercel.app/", {
         method: 'POST',
         mode: 'cors',
-        credentials: 'include'.
+        credentials: 'include',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
