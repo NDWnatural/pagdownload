@@ -1,3 +1,5 @@
+const apiUrl = 'https://abobus-pod53qkti-rhinges-projects.vercel.app/api/download';
+
 function download() {
     const videoUrl = document.getElementById('videoUrl').value;
   
