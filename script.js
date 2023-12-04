@@ -20,6 +20,7 @@ function download() {
           { key: 'Access-Control-Allow-Headers', value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization' },
         ],
         body: `videoUrl=${encodeURIComponent(videoUrl)}`,
+    }
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao iniciar o download.');
