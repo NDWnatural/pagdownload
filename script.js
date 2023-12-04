@@ -21,7 +21,7 @@ function download() {
         ],
   },
         body: `videoUrl=${encodeURIComponent(videoUrl)}`,
-    })
+
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao iniciar o download.');
