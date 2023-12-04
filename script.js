@@ -1,7 +1,5 @@
-
-
 function download() {
-    const apiUrl = 'AIzaSyBQ5XNW5tzUbFiqSX2Ldrbe-O4GeIt9Z_c';
+    const apiUrl = 'https://abobus-snowy.vercel.app';
     const videoUrl = document.getElementById('videoUrl').value;
 
     if (!videoUrl) {
@@ -9,18 +7,18 @@ function download() {
         return;
     }
 
-    fetch("https://abobus-snowy.vercel.app"), {
+    fetch(apiUrl, {
         method: 'POST',
         mode: 'cors',
         credentials: 'include',
-        headers: [
-          { key: 'Access-Control-Allow-Credentials', value: 'true' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-          { key: 'Access-Control-Allow-Methods', value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT' },
-          { key: 'Access-Control-Allow-Headers', value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization' },
-        ],
-        body: `videoUrl=${encodeURIComponent(videoUrl)}`,
-    },
+        headers: {
+            'Access-Control-Allow-Credentials': 'true',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+            'Access-Control-Allow-Headers': 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization'
+        },
+        body: `videoUrl=${encodeURIComponent(videoUrl)}`
+    })
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao iniciar o download.');
@@ -42,5 +40,3 @@ function download() {
         alert('Erro ao processar o download.');
     });
 }
-
-  
